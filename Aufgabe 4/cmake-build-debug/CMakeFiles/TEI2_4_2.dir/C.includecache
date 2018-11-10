@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Bernhardt/CLionProjects/TEI2-4-2/Aufgabe4.c
+stdio.h
+-
+stdlib.h
+-
+wave.h
+C:/Users/Bernhardt/CLionProjects/TEI2-4-2/wave.h
+math.h
+-
+string.h
+-
+tonleiter.h
+C:/Users/Bernhardt/CLionProjects/TEI2-4-2/tonleiter.h
+
+C:/Users/Bernhardt/CLionProjects/TEI2-4-2/tonleiter.h
+
+C:/Users/Bernhardt/CLionProjects/TEI2-4-2/wave.h
+
