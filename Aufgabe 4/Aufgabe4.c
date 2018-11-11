@@ -6,6 +6,9 @@
 #include <math.h>
 #include <string.h>
 
+#define maximum(a,b) \
+     (a > b ? a : b)
+
 
 #ifndef M_PI
 #define M_PI 3.1415926535897932384626433832795028841971
@@ -66,7 +69,7 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 
 float* ueberlagern(float* data_a,unsigned int size_a, float* data_b, unsigned int size_b){
 
-    float* final = malloc((size_t)(ceil(((double)size_a+(double)size_b)/2))*sizeof(float));
+    float* final = malloc(maximum(size_a,size_b)*sizeof(float));
     for (unsigned int i = 0; i < size_a; i++) {
         final[i] = data_a[i];
     }
