@@ -8,65 +8,45 @@
 
 
 #ifndef M_PI
-#define M_PI 3.1415926535897
+#define M_PI 3.1415926535897932384626433832795028841971
 #endif //M_PI
 
-void readSubChunks() {
-    FILE *input2;
-    input2 = fopen("test.wav", "rb");
-    struct CHUNKHEADER chunkhead;
-
-    for (int j = 12; ; j = (j + chunkhead.chunk_size + 8)) {
-
-        fseek(input2, j, 0);
-        fread(&chunkhead, sizeof(chunkhead), 1, input2);
-
-        if (feof(input2)) {
-            // printf("Datei ENDE\n");
-            break;
-        }
-    }
-    fclose(input2);
-}
-
 float* readDataChunk(unsigned int* data_size) {
-    FILE *input2;
-    input2 = fopen("test.wav", "rb");
-    struct CHUNKHEADER chunkhead;
+    FILE *input;
+    input = fopen("test.wav", "rb");
+    struct CHUNKHEADER chunkheader;
     char findData[4];
     int position = 0;
 
 
-    for (int j = 12;; j = (j + chunkhead.chunk_size + 8)) {
+    for (int j = 12;; j = (j + chunkheader.chunk_size + 8)) {
 
-        fseek(input2, j, 0);
-        fread(&chunkhead, sizeof(chunkhead), 1, input2);
+        fseek(input, j, 0);
+        fread(&chunkheader, sizeof(chunkheader), 1, input);
 
         for (int i = 0; i < 4; i++) {
-            findData[i] = chunkhead.chunk_id[i];
+            findData[i] = chunkheader.chunk_id[i];
         }
 
         if (findData[0] == 'd' && findData[1] == 'a' && findData[2] == 't' && findData[3] == 'a') {
             position = j;
-//            printf("\nPosition gefunden: %i\n", position);
             break;
         }
-        if (feof(input2)) {
-//            printf("Datei ENDE\n");
+        if (feof(input)) {
             break;
         }
     }
 
     float *pdata;
-    pdata = (float*) malloc(chunkhead.chunk_size);
-    fseek(input2, position+8, 0);
-    fread(pdata, chunkhead.chunk_size, 1, input2);
-//    printf("Hier:: %d\n",chunkhead.chunk_size);
-    *data_size = chunkhead.chunk_size/(sizeof(float));
-//    printf("Array Length: %f\n", *data_size);
+    pdata = (float*) malloc(chunkheader.chunk_size);
+    fseek(input, position+8, 0);
+    fread(pdata, chunkheader.chunk_size, 1, input);
+    *data_size = chunkheader.chunk_size/(sizeof(float));
     return pdata;
 }
 
+//Aufgabe 1:
+//Mittlerer Betrag der Daten: 0.049511
 float average(float* data, unsigned int size) {
     float sum = 0;
     for (unsigned int i = 0; i < size; i++) {
@@ -79,14 +59,14 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
     float* x= malloc(N* sizeof(float));
     for (unsigned int i = 0; i < N; i++) {
         x[i] = (float)(sin(f*2*M_PI*((float)i/r))*(float)a);
-        printf("%f\n",x[i]);
+        // printf("%f\n",x[i]); @Debug
     }
     return x;
 }
 
 float* ueberlagern(float* data_a,unsigned int size_a, float* data_b, unsigned int size_b){
 
-    float* final = malloc((ceil((double)size_a+(double)size_b)/2)* sizeof(float));
+    float* final = malloc((size_t)(ceil(((double)size_a+(double)size_b)/2))*sizeof(float));
     for (unsigned int i = 0; i < size_a; i++) {
         final[i] = data_a[i];
     }
@@ -105,9 +85,8 @@ int main() {
     FILE *input;
     float file_size = 0;
 
-
     averageValue = average(data, data_size);
-    printf("Average value: %f\n", averageValue); // Ergebnis: 0.049511
+    printf("Mittlerer Betrag der Daten: %f\n", averageValue); // Ergebnis: 0.049511
 
 
     input = fopen("test.wav", "rb");
@@ -115,11 +94,10 @@ int main() {
         printf("Datei wurde nicht eingelesen\n");
         return -1;
     } else {
-        printf("Datei erforlgreich eingelesen\n");
+        // printf("Datei erforlgreich eingelesen\n");
     }
     struct HEADER head;
     fread(&head, sizeof(head), 1, input);
-    printf("samplerate: %d\n", head.sample_rate);
 
     float* sinus1600 = sinusSignal(data_size, 1600, 1, head.sample_rate);
     float* sinus7600 = sinusSignal(data_size, 7600, 1, head.sample_rate);
@@ -131,10 +109,10 @@ int main() {
     writePCM("sinus7600Hz.wav", sinus7600, data_size, head);
     writePCM("Ueberlagert.wav", ueberlagert, data_size, head);
 
-
-
-    //Die Datei "sinus7600Hz.wav" klingt tiefer, da die bitrate mit 8000Hz zu niedrig gewählt ist.
-    //Sie muss immer dem Syntax Bitrate > Frequenz*2 entsprechen !
+   /* zu Aufgabe 2c:
+    * Die Datei "sinus7600Hz.wav" klingt tiefer, da die bitrate mit 8000Hz zu niedrig gewählt ist.
+    * Sie muss immer dem Syntax Bitrate > Frequenz*2 entsprechen !
+    */
 
     fclose(input);
 
