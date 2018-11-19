@@ -15,7 +15,7 @@ spektrum* DFT(float* x, size_t N)
 {
   size_t n,k;
 
-  /*Aus didaktischen Gründen N Koeffizienten reservieren/berechnen (statt (N+2)/2)*/
+  /*Aus didaktischen GrÃ¼nden N Koeffizienten reservieren/berechnen (statt (N+2)/2)*/
   spektrum* sp = (spektrum *) malloc(sizeof(spektrum));
   sp->real=(float*)malloc(sizeof(float)*N);
   sp->imag=(float*)malloc(sizeof(float)*N);
@@ -84,24 +84,26 @@ void plotfile(char* name, int maxN)
   system(command);
 }
 
-float* sinusSignal(unsigned int N, unsigned int f, float a, float r) 
-{
-    float* x = malloc(N * sizeof(float));
-    for (unsigned int i = 0; i < N; i++) 
-	{
-        x[i] = ((float) sin(f*2*M_PI*(i/r)))*a;
+float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
+    float* x= malloc(N* sizeof(float));
+    for (unsigned int i = 0; i < N; i++) {
+        x[i] = (float)(sin(f*2*M_PI*((float)i/r))*(float)a);
+        // printf("%f\n",x[i]); @Debug
     }
     return x;
 }
 
-float* overload(float* data1, float* data2, size_t size) 
-{
-  float* x = malloc(size * sizeof(float));
-  for (unsigned int i = 0; i < size; i++) 
-  {
-    x[i] = (data1[i] + data2[i]) / 2;
-  }
-  return x;
+float* ueberlagern(float* data_a,unsigned int size_a, float* data_b, unsigned int size_b){
+
+    float* final = malloc(maximum(size_a,size_b)*sizeof(float));
+    for (unsigned int i = 0; i < size_a; i++) {
+        final[i] = data_a[i];
+    }
+    for (unsigned int i = 0; i < size_b; i++) {
+        final[i] = (final[i]+data_b[i])/2;
+    }
+
+    return final;
 }
 
 int main() 
@@ -113,7 +115,7 @@ int main()
 
     data1 = sinusSignal(50, 1, 1, size);
     data2 = sinusSignal(50, 5, 2, size);
-    dataFinal = overload(data1, data2, size);
+    dataFinal = ueberlagern(data1, data2, size);
 
 	plot(dataFinal, size);
 
