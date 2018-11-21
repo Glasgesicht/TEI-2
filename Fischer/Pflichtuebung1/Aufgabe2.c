@@ -61,7 +61,7 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 }
 
 
-#define bufferlength 20
+#define bufferlength (int)20
 #define bufferkoeffizient ((float)1/(float)20)
 
 

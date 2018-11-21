@@ -51,82 +51,54 @@ float* readDataChunk(unsigned int* data_size) {
 }
 
 
-float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
-    float* x= malloc(N* sizeof(float));
-    for (unsigned int i = 0; i < N; i++) {
-        x[i] = (float)(sin(f*2*M_PI*((float)i/r))*(float)a);
-        printf("%f\n",x[i]);
-    }
-    return x;
-}
-
-
-#define koefflength 4
-#define bufferkoeffizient ((float)1/(float)20)
-
-
 float* Audiofilter(float* signal,unsigned int size) {
 
     float *sample = malloc(sizeof(float) * size);
-    float koeff[koefflength];
+    float koef[4];
+    float y = 0;
 
-    for(int n =0; n< koefflength; n++ )
-        koeff[n] = 0;
-
-
-/*
-    for(t){
+    for(unsigned int t = 0;t<size;t++){
         if(t>2){
-            y=koeff[0]*d;
-
-
+            y = (koef[0] *signal[t])+(koef[1]*signal[t-1])+(koef[2]*signal[t-2])+(koef[3]*signal[t-3]);
+            sample[t] = signal[t]-y;
+        }else{
+            sample[t]=signal[t];
         }
 
-    }*/
+        for (int i = 0; i < 4; i++)
+        {
+            float sum = 0;
+            for (int j = 0; j < 4; j++)
+            {
+                sum += signal[t - j] * koef[j];
+            }
 
-
-    for(int t = 0;t < size ; t++ ) {
-
-
-        for(int i = 0; i<4; i++) {
-            koeff[t] = koeff[t] - 0.01 * signal[t - i] *
-                                    ({
-                                          float _sum = 0;
-                                          for (int j = 0; j < 4; j++)
-                                          {
-                                              _sum += signal[t - j] * koeff[t]
-                                          }
-                                          _sum - signal[t];
-                                          _sum;
-                                  });
+            if (t - i < 0)
+                koef[i] = 0;
+            else
+                koef[i] += - 0.01f * signal[t-i] * (sum - signal[t]);
         }
-        sample[t] = signal[t];
 
     }
 
-
-    float summe_ringbuffer;
-
-    for(int n = 0;n<bufferlength;n++) {
-        ringbuffer[n] = 0;
-    }
-
-    for(unsigned int j =0; j < size;j++){
-
-        summe_ringbuffer = 0;
-        ringbuffer[j%20] = signal[j];
-
-        for(int t =0;t<bufferlength;t++) {
-            summe_ringbuffer+=ringbuffer[(20+j-t)%20]*filter[t];
+//Non-Funktionabel, zu stolz es zu loeschen
+/*  for(unsigned int t = 0;t < size ; t++ ) {
+        for (int i = 0; i < 4; i++) {
+            y = koeff[i] - 0.01f * signal[t - i] *
+                                   ({
+                                       float sum;
+                                       sum = 0;
+                                       for (int j = 0; j < 4; j++) {
+                                           sum += signal[t - j] * koeff[t];
+                                       }
+                                       sum = sum - signal[t];
+                                       sum;
+                                   });
         }
-
-            sample[j] = summe_ringbuffer;
-
-            printf("%f\n",sample[j]);
-        }*/
-
+        sample[t] = signal[t] - y;
+    } */
         return sample;
-    }
+}
 
 
 int main() {
@@ -148,9 +120,6 @@ int main() {
     float* dataneu = Audiofilter(data,data_size);
     writePCM("AudioNeu.wav",dataneu,data_size,head);
 
-
-    //Die Datei "sinus7600Hz.wav" klingt tiefer, da die bitrate mit 8000Hz zu niedrig gewählt ist.
-    //Sie muss immer dem Syntax Bitrate > Frequenz*2 entsprechen !
 
     fclose(input);
 
