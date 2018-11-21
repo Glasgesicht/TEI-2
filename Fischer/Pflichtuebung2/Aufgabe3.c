@@ -61,22 +61,49 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 }
 
 
-#define bufferlength 20
+#define koefflength 4
 #define bufferkoeffizient ((float)1/(float)20)
 
 
-float* Audiofilter(float* signal,unsigned int size){
+float* Audiofilter(float* signal,unsigned int size) {
 
-    float* signalneu = malloc(sizeof(float)*size);
-    float* ringbuffer = malloc(sizeof(float)*bufferlength);
+    float *sample = malloc(sizeof(float) * size);
+    float koeff[koefflength];
 
-    float filter[bufferlength]  =
-            {
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2
-            };
+    for(int n =0; n< koefflength; n++ )
+        koeff[n] = 0;
+
+
+/*
+    for(t){
+        if(t>2){
+            y=koeff[0]*d;
+
+
+        }
+
+    }*/
+
+
+    for(int t = 0;t < size ; t++ ) {
+
+
+        for(int i = 0; i<4; i++) {
+            koeff[i] = koeff[i] - 0.01 * signal[t - i] *
+                                  {
+                                          float _sum = 0;
+                                          for (int j = 0; j < 4; j++)
+                                          {
+                                              sum += signal[t - j] * koeff[j]
+                                          }
+                                          sum - signal[t];
+                                          return _sum;
+                                  };
+        }
+        sample[t] = signal[t];
+
+    }
+
 
     float summe_ringbuffer;
 
@@ -93,12 +120,12 @@ float* Audiofilter(float* signal,unsigned int size){
             summe_ringbuffer+=ringbuffer[(20+j-t)%20]*filter[t];
         }
 
-            signalneu[j] = summe_ringbuffer;
+            sample[j] = summe_ringbuffer;
 
-            printf("%f\n",signalneu[j]);
-        }
+            printf("%f\n",sample[j]);
+        }*/
 
-        return signalneu;
+        return sample;
     }
 
 

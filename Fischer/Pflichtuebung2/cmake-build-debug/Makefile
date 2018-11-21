@@ -124,32 +124,32 @@ Pflichtuebung1\fast:
 	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\build
 .PHONY : Pflichtuebung1\fast
 
-Aufgabe2.obj: Aufgabe2.c.obj
+Aufgabe3.obj: Aufgabe3.c.obj
 
-.PHONY : Aufgabe2.obj
+.PHONY : Aufgabe3.obj
 
 # target to build an object file
-Aufgabe2.c.obj:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj
-.PHONY : Aufgabe2.c.obj
+Aufgabe3.c.obj:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj
+.PHONY : Aufgabe3.c.obj
 
-Aufgabe2.i: Aufgabe2.c.i
+Aufgabe3.i: Aufgabe3.c.i
 
-.PHONY : Aufgabe2.i
+.PHONY : Aufgabe3.i
 
 # target to preprocess a source file
-Aufgabe2.c.i:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.i
-.PHONY : Aufgabe2.c.i
+Aufgabe3.c.i:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.i
+.PHONY : Aufgabe3.c.i
 
-Aufgabe2.s: Aufgabe2.c.s
+Aufgabe3.s: Aufgabe3.c.s
 
-.PHONY : Aufgabe2.s
+.PHONY : Aufgabe3.s
 
 # target to generate assembly for a file
-Aufgabe2.c.s:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.s
-.PHONY : Aufgabe2.c.s
+Aufgabe3.c.s:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.s
+.PHONY : Aufgabe3.c.s
 
 wave.obj: wave.c.obj
 
@@ -187,9 +187,9 @@ help:
 	@echo ... edit_cache
 	@echo ... Pflichtuebung1
 	@echo ... rebuild_cache
-	@echo ... Aufgabe2.obj
-	@echo ... Aufgabe2.i
-	@echo ... Aufgabe2.s
+	@echo ... Aufgabe3.obj
+	@echo ... Aufgabe3.i
+	@echo ... Aufgabe3.s
 	@echo ... wave.obj
 	@echo ... wave.i
 	@echo ... wave.s

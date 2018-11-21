@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/Aufgabe2.c">
+		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/Aufgabe3.c">
 			<Option target="Pflichtuebung1"/>
 		</Unit>
 		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/wave.c">

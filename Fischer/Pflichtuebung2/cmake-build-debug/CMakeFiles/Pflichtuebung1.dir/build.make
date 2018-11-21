@@ -58,23 +58,23 @@ include CMakeFiles\Pflichtuebung1.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\Pflichtuebung1.dir\flags.make
 
-CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj: CMakeFiles\Pflichtuebung1.dir\flags.make
-CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj: ..\Aufgabe2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.obj"
+CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj: CMakeFiles\Pflichtuebung1.dir\flags.make
+CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj: ..\Aufgabe3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.obj"
 	C:\PROGRA~2\MICROS~3\2017\ENTERP~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj /FdCMakeFiles\Pflichtuebung1.dir\ /FS -c C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe2.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj /FdCMakeFiles\Pflichtuebung1.dir\ /FS -c C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe3.c
 <<
 
-CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.i"
-	C:\PROGRA~2\MICROS~3\2017\ENTERP~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe2.c
+CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.i"
+	C:\PROGRA~2\MICROS~3\2017\ENTERP~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe > CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe3.c
 <<
 
-CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.s"
+CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.s"
 	C:\PROGRA~2\MICROS~3\2017\ENTERP~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.s /c C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe2.c
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.s /c C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\Aufgabe3.c
 <<
 
 CMakeFiles\Pflichtuebung1.dir\wave.c.obj: CMakeFiles\Pflichtuebung1.dir\flags.make
@@ -98,13 +98,13 @@ CMakeFiles\Pflichtuebung1.dir\wave.c.s: cmake_force
 
 # Object files for target Pflichtuebung1
 Pflichtuebung1_OBJECTS = \
-"CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj" \
+"CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj" \
 "CMakeFiles\Pflichtuebung1.dir\wave.c.obj"
 
 # External object files for target Pflichtuebung1
 Pflichtuebung1_EXTERNAL_OBJECTS =
 
-Pflichtuebung1.exe: CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj
+Pflichtuebung1.exe: CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj
 Pflichtuebung1.exe: CMakeFiles\Pflichtuebung1.dir\wave.c.obj
 Pflichtuebung1.exe: CMakeFiles\Pflichtuebung1.dir\build.make
 Pflichtuebung1.exe: CMakeFiles\Pflichtuebung1.dir\objects1.rsp
