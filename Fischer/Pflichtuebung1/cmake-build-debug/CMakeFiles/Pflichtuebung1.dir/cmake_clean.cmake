@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.obj"
+  "CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.obj"
   "CMakeFiles/Pflichtuebung1.dir/wave.c.obj"
   "Pflichtuebung1.pdb"
   "Pflichtuebung1.exe"

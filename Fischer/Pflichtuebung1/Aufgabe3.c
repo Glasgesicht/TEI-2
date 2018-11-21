@@ -89,16 +89,16 @@ float* Audiofilter(float* signal,unsigned int size) {
 
 
         for(int i = 0; i<4; i++) {
-            koeff[i] = koeff[i] - 0.01 * signal[t - i] *
-                                  {
+            koeff[t] = koeff[t] - 0.01 * signal[t - i] *
+                                    ({
                                           float _sum = 0;
                                           for (int j = 0; j < 4; j++)
                                           {
-                                              sum += signal[t - j] * koeff[j]
+                                              _sum += signal[t - j] * koeff[t]
                                           }
-                                          sum - signal[t];
-                                          return _sum;
-                                  };
+                                          _sum - signal[t];
+                                          _sum;
+                                  });
         }
         sample[t] = signal[t];
 
