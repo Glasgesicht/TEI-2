@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe2.c
+stdio.h
+-
+stdlib.h
+-
+wave.h
+C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h
+math.h
+-
+string.h
+-
+
+C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.c
+wave.h
+C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h
+stdio.h
+-
+string.h
+-
+
+C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h
+

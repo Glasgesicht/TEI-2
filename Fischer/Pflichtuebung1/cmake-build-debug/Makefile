@@ -49,10 +49,10 @@ RM = "C:\Program Files\JetBrains\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2
+CMAKE_SOURCE_DIR = C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -81,9 +81,9 @@ rebuild_cache\fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug\CMakeFiles C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\CMakeFiles C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung2\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,32 +124,32 @@ Pflichtuebung1\fast:
 	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\build
 .PHONY : Pflichtuebung1\fast
 
-Aufgabe3.obj: Aufgabe3.c.obj
+Aufgabe2.obj: Aufgabe2.c.obj
 
-.PHONY : Aufgabe3.obj
+.PHONY : Aufgabe2.obj
 
 # target to build an object file
-Aufgabe3.c.obj:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.obj
-.PHONY : Aufgabe3.c.obj
+Aufgabe2.c.obj:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.obj
+.PHONY : Aufgabe2.c.obj
 
-Aufgabe3.i: Aufgabe3.c.i
+Aufgabe2.i: Aufgabe2.c.i
 
-.PHONY : Aufgabe3.i
+.PHONY : Aufgabe2.i
 
 # target to preprocess a source file
-Aufgabe3.c.i:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.i
-.PHONY : Aufgabe3.c.i
+Aufgabe2.c.i:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.i
+.PHONY : Aufgabe2.c.i
 
-Aufgabe3.s: Aufgabe3.c.s
+Aufgabe2.s: Aufgabe2.c.s
 
-.PHONY : Aufgabe3.s
+.PHONY : Aufgabe2.s
 
 # target to generate assembly for a file
-Aufgabe3.c.s:
-	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe3.c.s
-.PHONY : Aufgabe3.c.s
+Aufgabe2.c.s:
+	$(MAKE) -f CMakeFiles\Pflichtuebung1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Pflichtuebung1.dir\Aufgabe2.c.s
+.PHONY : Aufgabe2.c.s
 
 wave.obj: wave.c.obj
 
@@ -187,9 +187,9 @@ help:
 	@echo ... edit_cache
 	@echo ... Pflichtuebung1
 	@echo ... rebuild_cache
-	@echo ... Aufgabe3.obj
-	@echo ... Aufgabe3.i
-	@echo ... Aufgabe3.s
+	@echo ... Aufgabe2.obj
+	@echo ... Aufgabe2.i
+	@echo ... Aufgabe2.s
 	@echo ... wave.obj
 	@echo ... wave.i
 	@echo ... wave.s

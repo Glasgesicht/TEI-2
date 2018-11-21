@@ -1,3 +1,0 @@
-C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/cmake-build-debug/CMakeFiles/Pflichtuebung1.dir
-C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

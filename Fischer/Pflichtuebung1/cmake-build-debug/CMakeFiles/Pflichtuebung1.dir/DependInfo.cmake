@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/Pflichtuebung1.c" "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/cmake-build-debug/CMakeFiles/TEI2_4_2.dir/Pflichtuebung1.c.obj"
-  "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/wave.c" "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung2/cmake-build-debug/CMakeFiles/TEI2_4_2.dir/wave.c.obj"
+  "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe2.c" "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.obj"
+  "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.c" "C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/CMakeFiles/Pflichtuebung1.dir/wave.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 
