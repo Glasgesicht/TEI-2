@@ -54,41 +54,40 @@ float* readDataChunk(unsigned int* data_size) {
 float* Audiofilter(float* signal,unsigned int size) {
 
     float *sample = malloc(sizeof(float) * size);
-    float koef[4];
-    float y = 0;
-    float sum = 0;
+    float* koef = malloc(sizeof(float)*4);
 
     for(int n = 0;n<4;n++)
         koef[n] = 0;
 
-    for(unsigned int t = 0;t<size;t++){
+    for(int t = 0;t<(int)size;t++){
         if(t>2){
-            y = (koef[0] * signal[t]) + (koef[1]*signal[t-1]) + (koef[2]*signal[t-2]) + (koef[3]*signal[t-3]);
-            sample[t] = signal[t] - y;
+            sample[t] = signal[t] - (koef[0] * signal[t]) + (koef[1]*signal[t-1]) + (koef[2]*signal[t-2]) + (koef[3]*signal[t-3]);
         }else{
             sample[t]=signal[t];
         }
 
         for (int i = 0; i < 4; i++)
         {
-            sum = 0;
+            float sum = 0;
             for (int j = 0; j < 4; j++)
             {
-                sum += signal[t - j] * koef[j];
+                sum += sample[t - j] * koef[j];
             }
 
-            if (t - i < 0)
+            if (t - i < 0) {
                 koef[i] = 0;
-            else
-                koef[i] += - 0.01f * signal[t-i] * (sum - signal[t]);
+            }else {
+                koef[i] -= 0.01f * sample[t - i] * (sum - sample[t]);
+            printf("%f\n",koef[i]);
+            }
         }
-        printf("%f\n",sample[t]);
+        //printf("%f\n",sample[t]);
     }
 
 //Non-Funktionabel, zu stolz es zu loeschen
 /*  for(unsigned int t = 0;t < size ; t++ ) {
         for (int i = 0; i < 4; i++) {
-            y = koeff[i] - 0.01f * signal[t - i] *
+            koeff[i] -= 0.01f * signal[t - i] *
                                    ({
                                        float sum;
                                        sum = 0;
@@ -110,7 +109,6 @@ int main() {
     float* data = readDataChunk(&data_size);
 
     FILE *input;
-    float file_size = 0;
     input = fopen("test.wav", "rb");
     if (input == NULL) {
         printf("Datei wurde nicht eingelesen\n");
