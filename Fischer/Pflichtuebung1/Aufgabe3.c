@@ -80,7 +80,7 @@ float* Audiofilter(float* signal,unsigned int size) {
 
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //Nested functions <3
-                koef[i] -= 0.1f * signal[t - i] * (
+                koef[i] -= 0.01f * signal[t - i] * (
                                                     ({
                                                         float _sum = 0;
                                                         for (int j = 0; j < 4; j++)

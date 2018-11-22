@@ -57,18 +57,18 @@ include CMakeFiles/Pflichtuebung1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Pflichtuebung1.dir/flags.make
 
-CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o: CMakeFiles/Pflichtuebung1.dir/flags.make
-CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o: ../Aufgabe2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o   -c /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe2.c
+CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o: CMakeFiles/Pflichtuebung1.dir/flags.make
+CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o: ../Aufgabe3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o   -c /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c
 
-CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe2.c > CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.i
+CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c > CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.i
 
-CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe2.c -o CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.s
+CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c -o CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.s
 
 CMakeFiles/Pflichtuebung1.dir/wave.c.o: CMakeFiles/Pflichtuebung1.dir/flags.make
 CMakeFiles/Pflichtuebung1.dir/wave.c.o: ../wave.c
@@ -85,13 +85,13 @@ CMakeFiles/Pflichtuebung1.dir/wave.c.s: cmake_force
 
 # Object files for target Pflichtuebung1
 Pflichtuebung1_OBJECTS = \
-"CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o" \
+"CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o" \
 "CMakeFiles/Pflichtuebung1.dir/wave.c.o"
 
 # External object files for target Pflichtuebung1
 Pflichtuebung1_EXTERNAL_OBJECTS =
 
-Pflichtuebung1.exe: CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o
+Pflichtuebung1.exe: CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o
 Pflichtuebung1.exe: CMakeFiles/Pflichtuebung1.dir/wave.c.o
 Pflichtuebung1.exe: CMakeFiles/Pflichtuebung1.dir/build.make
 Pflichtuebung1.exe: CMakeFiles/Pflichtuebung1.dir/link.txt

@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Pflichtuebung1.dir/Aufgabe2.c.o CMakeFiles/Pflichtuebung1.dir/wave.c.o  -o Pflichtuebung1.exe -Wl,--out-implib,libPflichtuebung1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o CMakeFiles/Pflichtuebung1.dir/wave.c.o  -o Pflichtuebung1.exe -Wl,--out-implib,libPflichtuebung1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
