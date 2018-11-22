@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "wave.h"
@@ -73,6 +74,10 @@ float* Audiofilter(float* signal,unsigned int size) {
             if (t - i < 0) {
                 koef[i] = 0;
             }else {
+
+/* Test for GCC > 3.2.0 */
+#if __GNUC__ > 3 || __GNUC__ == 3 && (__GNUC_MINOR__ > 2)
+
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //Nested functions <3
                 koef[i] -= 0.01f * sample[t - i] * (
@@ -86,6 +91,16 @@ float* Audiofilter(float* signal,unsigned int size) {
                                                     })
                                                     - sample[t]);
             printf("%f\n",koef[i]);
+#else
+                float sum = 0;
+                for (int j = 0; j < 4; j++)
+                {
+                    sum += sample[t - j] * koef[j];
+                }
+
+                koef[i] -= 0.01f * sample[t - i] * (sum - sample[t]);
+                //printf("%f\n",koef[i]);
+#endif
             }
         }
         //printf("%f\n",sample[t]);

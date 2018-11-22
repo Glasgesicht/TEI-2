@@ -123,32 +123,32 @@ Pflichtuebung1/fast:
 	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/build
 .PHONY : Pflichtuebung1/fast
 
-Aufgabe3.o: Aufgabe3.c.o
+Aufgabe3_nested.o: Aufgabe3_nested.c.o
 
-.PHONY : Aufgabe3.o
+.PHONY : Aufgabe3_nested.o
 
 # target to build an object file
-Aufgabe3.c.o:
-	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o
-.PHONY : Aufgabe3.c.o
+Aufgabe3_nested.c.o:
+	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3_nested.c.o
+.PHONY : Aufgabe3_nested.c.o
 
-Aufgabe3.i: Aufgabe3.c.i
+Aufgabe3_nested.i: Aufgabe3_nested.c.i
 
-.PHONY : Aufgabe3.i
+.PHONY : Aufgabe3_nested.i
 
 # target to preprocess a source file
-Aufgabe3.c.i:
-	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.i
-.PHONY : Aufgabe3.c.i
+Aufgabe3_nested.c.i:
+	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3_nested.c.i
+.PHONY : Aufgabe3_nested.c.i
 
-Aufgabe3.s: Aufgabe3.c.s
+Aufgabe3_nested.s: Aufgabe3_nested.c.s
 
-.PHONY : Aufgabe3.s
+.PHONY : Aufgabe3_nested.s
 
 # target to generate assembly for a file
-Aufgabe3.c.s:
-	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.s
-.PHONY : Aufgabe3.c.s
+Aufgabe3_nested.c.s:
+	$(MAKE) -f CMakeFiles/Pflichtuebung1.dir/build.make CMakeFiles/Pflichtuebung1.dir/Aufgabe3_nested.c.s
+.PHONY : Aufgabe3_nested.c.s
 
 wave.o: wave.c.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Pflichtuebung1"
 	@echo "... edit_cache"
-	@echo "... Aufgabe3.o"
-	@echo "... Aufgabe3.i"
-	@echo "... Aufgabe3.s"
+	@echo "... Aufgabe3_nested.o"
+	@echo "... Aufgabe3_nested.i"
+	@echo "... Aufgabe3_nested.s"
 	@echo "... wave.o"
 	@echo "... wave.i"
 	@echo "... wave.s"
