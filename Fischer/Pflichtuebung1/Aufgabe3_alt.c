@@ -107,7 +107,7 @@ int main() {
     fread(&head, sizeof(head), 1, input);
 
     float* dataneu = Audiofilter(data,data_size);
-    writePCM("AudioNeu.wav",dataneu,data_size,head);
+    writePCM("Aufgabe3_alt.wav",dataneu,data_size,head);
 
 
     fclose(input);

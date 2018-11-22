@@ -80,16 +80,16 @@ float* Audiofilter(float* signal,unsigned int size) {
 
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //Nested functions <3
-                koef[i] -= 0.01f * sample[t - i] * (
+                koef[i] -= 0.1f * signal[t - i] * (
                                                     ({
                                                         float _sum = 0;
                                                         for (int j = 0; j < 4; j++)
                                                         {
-                                                            _sum += sample[t - j] * koef[j];
+                                                            _sum += signal[t - j] * koef[j];
                                                         }
                                                         _sum;
                                                     })
-                                                    - sample[t]);
+                                                    - signal[t]);
                 //printf("%f\n",koef[i]);
 #else
 /* Implementierung, die auch mit MingGW Kompatibel sein soll*/
@@ -126,7 +126,7 @@ int main() {
     fread(&head, sizeof(head), 1, input);
 
     float* dataneu = Audiofilter(data,data_size);
-    writePCM("AudioNeu.wav",dataneu,data_size,head);
+    writePCM("Aufgabe3.wav",dataneu,data_size,head);
 
 
     fclose(input);

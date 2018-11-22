@@ -62,7 +62,6 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 
 
 #define bufferlength (int)20
-#define bufferkoeffizient ((float)1/(float)20)
 
 
 float* Audiofilter(float* signal,unsigned int size){
@@ -72,10 +71,10 @@ float* Audiofilter(float* signal,unsigned int size){
 
     float filter[bufferlength]  =
             {
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2,
-            0.2, 0.2, 0.2, 0.2, 0.2
+            0.1, 0.1, 0.1, 0.1, 0.1,
+            0.1, 0.1, 0.1, 0.1, 0.1,
+            0.1, 0.1, 0.1, 0.1, 0.1,
+            0.1, 0.1, 0.1, 0.1, 0.1
             };
 
     float summe_ringbuffer;
@@ -95,7 +94,7 @@ float* Audiofilter(float* signal,unsigned int size){
 
             signalneu[j] = summe_ringbuffer;
 
-            printf("%f\n",signalneu[j]);
+            //printf("%f\n",signalneu[j]);
         }
 
         return signalneu;
@@ -119,11 +118,7 @@ int main() {
     fread(&head, sizeof(head), 1, input);
 
     float* dataneu = Audiofilter(data,data_size);
-    writePCM("AudioNeu.wav",dataneu,data_size,head);
-
-
-    //Die Datei "sinus7600Hz.wav" klingt tiefer, da die bitrate mit 8000Hz zu niedrig gewählt ist.
-    //Sie muss immer dem Syntax Bitrate > Frequenz*2 entsprechen !
+    writePCM("Aufgabe2.wav",dataneu,data_size,head);
 
     fclose(input);
 

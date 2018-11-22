@@ -97,15 +97,9 @@ float* Audiofilter(float* signal,unsigned int size){
 int main() {
     unsigned int data_size;
     float* data = readDataChunk(&data_size);
-    float averageValue = 0;
 
     FILE *input;
     float file_size = 0;
-
-
-    averageValue = average(data, data_size);
-    printf("Average value: %f\n", averageValue); // Ergebnis: 0.049511
-
 
     input = fopen("test.wav", "rb");
     if (input == NULL) {
@@ -116,26 +110,9 @@ int main() {
     }
     struct HEADER head;
     fread(&head, sizeof(head), 1, input);
-    printf("samplerate: %d\n", head.sample_rate);
-
- /*   float* sinus1600 = sinusSignal(data_size, 1600, 1, head.sample_rate);
-    float* sinus7600 = sinusSignal(data_size, 7600, 1, head.sample_rate);
-
-    float* ueberlagert = ueberlagern(data,data_size,sinus1600,data_size); */
-
-   // float* sinus440 = sinusSignal(data_size, 440, 1, head.sample_rate);
-  /*  writePCM("sinus1600Hz.wav", sinus1600, data_size, head);
-    writePCM("sinus7600Hz.wav", sinus7600, data_size, head);
-    writePCM("Ueberlagert.wav", ueberlagert, data_size, head);*/
-
 
     float* dataneu = Audiofilter(data,data_size);
-  writePCM("AudioNeu.wav",dataneu,data_size,head);
-
-
-
-    //Die Datei "sinus7600Hz.wav" klingt tiefer, da die bitrate mit 8000Hz zu niedrig gewählt ist.
-    //Sie muss immer dem Syntax Bitrate > Frequenz*2 entsprechen !
+    writePCM("Aufgabe1.wav",dataneu,data_size,head);
 
     fclose(input);
 
