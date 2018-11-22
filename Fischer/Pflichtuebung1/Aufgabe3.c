@@ -76,7 +76,7 @@ float* Audiofilter(float* signal,unsigned int size) {
             }else {
 
 /* Test for GCC > 3.2.0 */
-#if __GNUC__ > 3 || __GNUC__ == 3 && (__GNUC_MINOR__ > 2)
+#if ((__GNUC__ > 3) || (__GNUC__ == 3 && (__GNUC_MINOR__ > 2)))
 
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //Nested functions <3
@@ -92,6 +92,7 @@ float* Audiofilter(float* signal,unsigned int size) {
                                                     - sample[t]);
                 //printf("%f\n",koef[i]);
 #else
+/* Implementierung, die auch mit MingGW Kompatibel sein soll*/
                 float sum = 0;
                 for (int j = 0; j < 4; j++)
                 {
