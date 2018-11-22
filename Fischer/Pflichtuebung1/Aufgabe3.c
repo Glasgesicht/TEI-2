@@ -80,16 +80,16 @@ float* Audiofilter(float* signal,unsigned int size) {
 
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //Nested functions <3
-                koef[i] -= 0.01f * signal[t - i] * (
+                koef[i] -= 0.01f * sample[t - i] * (
                                                     ({
                                                         float _sum = 0;
                                                         for (int j = 0; j < 4; j++)
                                                         {
-                                                            _sum += signal[t - j] * koef[j];
+                                                            _sum += sample[t - j] * koef[j];
                                                         }
                                                         _sum;
                                                     })
-                                                    - signal[t]);
+                                                    - sample[t]);
                 //printf("%f\n",koef[i]);
 #else
 /* Implementierung, die auch mit MingGW Kompatibel sein soll*/
