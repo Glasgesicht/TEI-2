@@ -90,7 +90,7 @@ float* Audiofilter(float* signal,unsigned int size) {
                                                         _sum;
                                                     })
                                                     - sample[t]);
-            printf("%f\n",koef[i]);
+                //printf("%f\n",koef[i]);
 #else
                 float sum = 0;
                 for (int j = 0; j < 4; j++)

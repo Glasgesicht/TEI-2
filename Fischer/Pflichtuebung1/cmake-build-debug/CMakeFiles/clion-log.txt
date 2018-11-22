@@ -1,4 +1,11 @@
-C:\Users\Bernhardt\.CLion2018.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1
+"C:\Program Files\JetBrains\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1
+-- The C compiler identification is MSVC 19.13.26129.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug
+-- Build files have been written to: C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug

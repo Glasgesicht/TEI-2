@@ -4,86 +4,96 @@
 	<Project>
 		<Option title="TEI2_F_1_1-3"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Pflichtuebung1">
-				<Option output="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Pflichtuebung1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pflichtuebung1"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Pflichtuebung1/fast">
-				<Option output="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Pflichtuebung1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.3.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pflichtuebung1/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pflichtuebung1">
+				<Option output="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Pflichtuebung1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.13.26128\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.13.26128\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 Pflichtuebung1"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pflichtuebung1/fast">
+				<Option output="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug/Pflichtuebung1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.13.26128\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.13.26128\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 Pflichtuebung1/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Bernhardt\Documents\GitHub\TEI-2\Fischer\Pflichtuebung1\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c">
+		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c">
 			<Option target="Pflichtuebung1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.c">
+		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.c">
 			<Option target="Pflichtuebung1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h">
+		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h">
 			<Option target="Pflichtuebung1"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/CMakeLists.txt">
+		<Unit filename="C:/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
