@@ -78,29 +78,14 @@ float* Audiofilter(float* signal,unsigned int size) {
                 koef[i] = 0;
             }else {
                 koef[i] -= 0.01f * sample[t - i] * (sum - sample[t]);
-            printf("%f\n",koef[i]);
+                //printf("%f\n",koef[i]);
             }
         }
         //printf("%f\n",sample[t]);
     }
 
-//Non-Funktionabel, zu stolz es zu loeschen
-/*  for(unsigned int t = 0;t < size ; t++ ) {
-        for (int i = 0; i < 4; i++) {
-            koeff[i] -= 0.01f * signal[t - i] *
-                                   ({
-                                       float sum;
-                                       sum = 0;
-                                       for (int j = 0; j < 4; j++) {
-                                           sum += signal[t - j] * koeff[t];
-                                       }
-                                       sum = sum - signal[t];
-                                       sum;
-                                   });
-        }
-        sample[t] = signal[t] - y;
-    } */
-        return sample;
+
+    return sample;
 }
 
 

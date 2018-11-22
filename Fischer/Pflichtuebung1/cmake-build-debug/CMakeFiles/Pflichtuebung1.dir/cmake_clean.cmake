@@ -1,10 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.obj"
-  "CMakeFiles/Pflichtuebung1.dir/wave.c.obj"
+  "CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o"
+  "CMakeFiles/Pflichtuebung1.dir/wave.c.o"
   "Pflichtuebung1.pdb"
   "Pflichtuebung1.exe"
-  "Pflichtuebung1.exe.manifest"
-  "Pflichtuebung1.lib"
+  "libPflichtuebung1.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
