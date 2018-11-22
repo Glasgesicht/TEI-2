@@ -1,6 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "wave.h"
@@ -52,7 +51,6 @@ float* readDataChunk(unsigned int* data_size) {
 }
 
 
-
 float* Audiofilter(float* signal,unsigned int size) {
 
     float *sample = malloc(sizeof(float) * size);
@@ -62,36 +60,19 @@ float* Audiofilter(float* signal,unsigned int size) {
         koef[n] = 0;
 
     for(int t = 0;t<(int)size;t++){
-        if(t>2) {
-            sample[t] = signal[t] - ((koef[0] * signal[t]) + (koef[1] * signal[t - 1]) + (koef[2] * signal[t - 2]) +
-                                     (koef[3] * signal[t - 3]));
-        }else {
-            sample[t] = signal[t];
+        if(t>2){
+            sample[t] = signal[t] - ((koef[0] * signal[t]) + (koef[1]*signal[t-1]) + (koef[2]*signal[t-2]) + (koef[3]*signal[t-3]));
+        }else{
+            sample[t]=signal[t];
         }
 
         for (int i = 0; i < 4; i++)
         {
+
+
             if (t - i < 0) {
                 koef[i] = 0;
             }else {
-
-/* Test for GCC > 3.2.0 */
-#if __GNUC__ > 3 || __GNUC__ == 3 && (__GNUC_MINOR__ > 2)
-
-                //Implementierung moeglichst nah an der gegebenen Formel
-                //Nested functions <3
-                koef[i] -= 0.01f * sample[t - i] * (
-                                                    ({
-                                                        float _sum = 0;
-                                                        for (int j = 0; j < 4; j++)
-                                                        {
-                                                            _sum += sample[t - j] * koef[j];
-                                                        }
-                                                        _sum;
-                                                    })
-                                                    - sample[t]);
-            printf("%f\n",koef[i]);
-#else
                 float sum = 0;
                 for (int j = 0; j < 4; j++)
                 {
@@ -100,12 +81,13 @@ float* Audiofilter(float* signal,unsigned int size) {
 
                 koef[i] -= 0.01f * sample[t - i] * (sum - sample[t]);
                 //printf("%f\n",koef[i]);
-#endif
             }
         }
         //printf("%f\n",sample[t]);
     }
-        return sample;
+
+
+    return sample;
 }
 
 
