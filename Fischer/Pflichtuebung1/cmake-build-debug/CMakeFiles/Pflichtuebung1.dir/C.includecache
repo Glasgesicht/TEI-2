@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c
+C:/Users/bernh/CLionProjects/TEI-2/Fischer/Pflichtuebung1/Aufgabe3.c
 stdio.h
 -
 stdlib.h
 -
 wave.h
-/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h
+C:/Users/bernh/CLionProjects/TEI-2/Fischer/Pflichtuebung1/wave.h
 math.h
 -
 string.h
 -
 
-/cygdrive/c/Users/Bernhardt/Documents/GitHub/TEI-2/Fischer/Pflichtuebung1/wave.h
+C:/Users/bernh/CLionProjects/TEI-2/Fischer/Pflichtuebung1/wave.h
 

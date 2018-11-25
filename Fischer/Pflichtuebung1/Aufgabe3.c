@@ -124,7 +124,10 @@ int main() {
     }
     struct HEADER head;
     fread(&head, sizeof(head), 1, input);
-
+    /*printf("%d\n",head.bits_per_sample);
+        Anmerkung: Eigentlich müsste eine Differenzierung stattfinden, wie hoch die Audiodatei auflößt.
+        Andernfalls ist das Programm (Bei z.B. 16 BIT PCM Datein) Fehlerhaft.
+     */
     float* dataneu = Audiofilter(data,data_size);
     writePCM("Aufgabe3.wav",dataneu,data_size,head);
 
