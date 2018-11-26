@@ -71,9 +71,7 @@ float* Audiofilter(float* signal,unsigned int size) {
 
         for (int i = 0; i < 4; i++)
         {
-            if (t - i < 0) {
-                koef[i] = 0;
-            }else {
+            if (t - i >= 0) {
 
 /* Test for GCC > 3.2.0 */
 #if ((__GNUC__ > 3) || (__GNUC__ == 3 && (__GNUC_MINOR__ > 2)))

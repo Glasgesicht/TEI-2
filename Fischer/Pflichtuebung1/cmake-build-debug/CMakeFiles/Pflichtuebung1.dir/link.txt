@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\CLion 2018.2.5\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\Pflichtuebung1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Pflichtuebung1.dir/objects.a @CMakeFiles\Pflichtuebung1.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g   -Wl,--whole-archive CMakeFiles\Pflichtuebung1.dir/objects.a -Wl,--no-whole-archive  -o Pflichtuebung1.exe -Wl,--out-implib,libPflichtuebung1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Pflichtuebung1.dir\linklibs.rsp
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Pflichtuebung1.dir/Aufgabe3.c.o CMakeFiles/Pflichtuebung1.dir/wave.c.o  -o Pflichtuebung1.exe -Wl,--out-implib,libPflichtuebung1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
