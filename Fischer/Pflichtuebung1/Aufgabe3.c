@@ -53,33 +53,33 @@ float* readDataChunk(unsigned int* data_size) {
 
 
 
-float* Audiofilter(float* signal,unsigned int size) {
+float* Audiofilter(float* sample,unsigned int size) {
 
-    float *sample = malloc(sizeof(float) * size);
+
+    //Reserviere Speicher für Neues Audiosignal
+    float *signalNeu = malloc(sizeof(float) * size);
+
+    //"Ringbuffer" für die Koeffizienten
     float* koef = malloc(sizeof(float)*4);
 
+    //Setze Koeffizienten auf 0 um Fehler zu vermeiden
     for(int n = 0;n<4;n++)
         koef[n] = 0;
 
-    for(int t = 0;t<(int)size;t++){
-        if(t>2) {
-            sample[t] = signal[t] - ((koef[0] * signal[t]) + (koef[1] * signal[t - 1]) + (koef[2] * signal[t - 2]) +
-                                     (koef[3] * signal[t - 3]));
-        }else {
-            sample[t] = signal[t];
-        }
 
-        for (int i = 0; i < 4; i++)
-        {
-            if (t - i >= 0) {
+    for(int t = 0;t<(int)size;t++){
 
 /* Test for GCC > 3.2.0 */
+//Nested Functions sind im C Standart nicht erlaubt, deswegen (zur Sicherheit) die doppelte Implementierung
 #if ((__GNUC__ > 3) || (__GNUC__ == 3 && (__GNUC_MINOR__ > 2)))
 
                 //Implementierung moeglichst nah an der gegebenen Formel
                 //via nested function
-                koef[i] -= 0.01f * sample[t - i] * (
+
+                //Anlernen des Audiofilters
+                koef[t%4] -= 0.01f * sample[t - (t%4)] * (
                                                     ({
+                                                        //Lokale Variable zu berechnung der Summenformel
                                                         float _sum = 0;
                                                         for (int j = 0; j < 4; j++)
                                                         {
@@ -88,7 +88,7 @@ float* Audiofilter(float* signal,unsigned int size) {
                                                         _sum;
                                                     })
                                                     - sample[t]);
-                //printf("%f\n",koef[i]);
+                //printf("%f\n",koef[(t%4)]);
 #else
 /* Implementierung, die auch mit MingGW Kompatibel sein soll*/
                 float sum = 0;
@@ -97,14 +97,24 @@ float* Audiofilter(float* signal,unsigned int size) {
                     sum += sample[t - j] * koef[j];
                 }
 
-                koef[i] -= 0.01f * sample[t - i] * (sum - sample[t]);
-                //printf("%f\n",koef[i]);
+                koef[t%4] -= 0.01f * sample[t - (t%4)] * (sum - sample[t]);
+                //printf("%f\n",koef[(t%4)]);
 #endif
-            }
+
+
+        if(t>=3) {
+            //Erzeugung des Neuen Signals, in dem der Errechnete Fehler subtrahiert wird.
+            signalNeu[t] = sample[t] - ((koef[t%4] * sample[t]) + (koef[(t+1)%1] * sample[t - 1]) + (koef[(t+2)%4] * sample[t - 2]) +
+                                         (koef[(t+3)%4] * sample[t - 3]));
+        }else {
+            //H
+            signalNeu[t] = sample[t];
         }
-        //printf("%f\n",sample[t]);
+
+
+        printf("%f\n",signalNeu[t]);
     }
-        return sample;
+        return signalNeu;
 }
 
 

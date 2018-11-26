@@ -67,14 +67,14 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 float* Audiofilter(float* signal,unsigned int size){
 
     float* signalneu = malloc(sizeof(float)*size);
-    float* ringbuffer = malloc(sizeof(float)*bufferlength);
+    double* ringbuffer = malloc(sizeof(double)*bufferlength);
 
-    float filter[bufferlength]  =
+    double filter[bufferlength]  =
             {
-            0.1, 0.1, 0.1, 0.1, 0.1,
-            0.1, 0.1, 0.1, 0.1, 0.1,
-            0.1, 0.1, 0.1, 0.1, 0.1,
-            0.1, 0.1, 0.1, 0.1, 0.1
+            0.05, 0.05, 0.05, 0.05, 0.05,
+            0.05, 0.05, 0.05, 0.05, 0.05,
+            0.05, 0.05, 0.05, 0.05, 0.05,
+            0.05, 0.05, 0.05, 0.05, 0.05
             };
 
     float summe_ringbuffer;
