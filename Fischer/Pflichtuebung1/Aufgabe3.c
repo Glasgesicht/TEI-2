@@ -79,7 +79,7 @@ float* Audiofilter(float* signal,unsigned int size) {
 #if ((__GNUC__ > 3) || (__GNUC__ == 3 && (__GNUC_MINOR__ > 2)))
 
                 //Implementierung moeglichst nah an der gegebenen Formel
-                //Nested functions <3
+                //via nested function
                 koef[i] -= 0.01f * sample[t - i] * (
                                                     ({
                                                         float _sum = 0;
