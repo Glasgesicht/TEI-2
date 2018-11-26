@@ -7,6 +7,9 @@
 #include <math.h>
 #include <string.h>
 
+//Hier zu lesende Audiodatei definierern
+#define __AUDIODATA__ "test.wav"
+
 
 #ifndef M_PI
 #define M_PI 3.1415926535897
@@ -15,7 +18,7 @@
 
 float* readDataChunk(unsigned int* data_size) {
     FILE *input2;
-    input2 = fopen("test.wav", "rb");
+    input2 = fopen(__AUDIODATA__, "rb");
     struct CHUNKHEADER chunkhead;
     char findData[4];
     int position = 0;
@@ -56,10 +59,10 @@ float* readDataChunk(unsigned int* data_size) {
 float* Audiofilter(float* sample,unsigned int size) {
 
 
-    //Reserviere Speicher für Neues Audiosignal
+    //Reserviere Speicher fÃ¼r Neues Audiosignal
     float *signalNeu = malloc(sizeof(float) * size);
 
-    //"Ringbuffer" für die Koeffizienten
+    //"Ringbuffer" fÃ¼r die Koeffizienten
     float* koef = malloc(sizeof(float)*4);
 
     //Setze Koeffizienten auf 0 um Fehler zu vermeiden
@@ -92,7 +95,7 @@ float* Audiofilter(float* sample,unsigned int size) {
 #else
 /* Implementierung, die auch mit MingGW Kompatibel sein soll*/
 
-                // Berechne hier die Summer außerhalb der eigentlichen Formel.
+                // Berechne hier die Summer auÃŸerhalb der eigentlichen Formel.
                 float sum = 0;
                 for (int j = 0; j < 4; j++)
                 {
@@ -125,7 +128,7 @@ int main() {
     float* data = readDataChunk(&data_size);
 
     FILE *input;
-    input = fopen("test.wav", "rb");
+    input = fopen(__AUDIODATA__, "rb");
     if (input == NULL) {
         printf("Datei wurde nicht eingelesen\n");
         return -1;
@@ -135,7 +138,7 @@ int main() {
     struct HEADER head;
     fread(&head, sizeof(head), 1, input);
     /*printf("%d\n",head.bits_per_sample);
-        Anmerkung: Eigentlich müsste eine Differenzierung stattfinden, wie hoch die Audiodatei auflößt.
+        Anmerkung: Eigentlich mÃ¼sste eine Differenzierung stattfinden, wie hoch die Audiodatei auflÃ¶ÃŸt.
         Andernfalls ist das Programm (Bei z.B. 16 BIT PCM Datein) Fehlerhaft.
      */
     float* dataneu = Audiofilter(data,data_size);
