@@ -125,7 +125,7 @@ int main() {
     float* data = readDataChunk(&data_size);
 
     FILE *input;
-    input = fopen("testR.wav", "rb");
+    input = fopen("test.wav", "rb");
     if (input == NULL) {
         printf("Datei wurde nicht eingelesen\n");
         return -1;
