@@ -66,9 +66,13 @@ float* sinusSignal(unsigned int N, unsigned int f, float a, unsigned int r) {
 
 float* Audiofilter(float* signal,unsigned int size){
 
+    //Neues Signal
     float* signalneu = malloc(sizeof(float)*size);
+
+    //Ringbuffer
     double* ringbuffer = malloc(sizeof(double)*bufferlength);
 
+    //Filterkoeffizienten
     double filter[bufferlength]  =
             {
             0.05, 0.05, 0.05, 0.05, 0.05,
@@ -77,26 +81,34 @@ float* Audiofilter(float* signal,unsigned int size){
             0.05, 0.05, 0.05, 0.05, 0.05
             };
 
+    //Somme der Ergebniskoeffizienten
     float summe_ringbuffer;
 
+    //Setze Bufferkomponenten auf 0, um Fehler zu vermeiden
     for(int n = 0;n<bufferlength;n++) {
         ringbuffer[n] = 0;
     }
 
+    //Iteriere durch die Ausgangsdatei
     for(unsigned int j =0; j < size;j++){
 
+        //Setze Summe zu jedem Durchgang auf 0
         summe_ringbuffer = 0;
+
+        //Füge Ringbuffer neues Element hinzu
         ringbuffer[j%20] = signal[j];
 
+        //Errechung der Ergebnissumme anhand des Ringbuffers mit entsprechendem Filterkoeffizienten
         for(int t =0;t<bufferlength;t++) {
             summe_ringbuffer+=ringbuffer[(20+j-t)%20]*filter[t];
         }
-
+            //Speichere Ergebnis im neuem Signal
             signalneu[j] = summe_ringbuffer;
 
             //printf("%f\n",signalneu[j]);
         }
 
+        //Gebe Ergebnis an Hauptprogramm zurück
         return signalneu;
     }
 

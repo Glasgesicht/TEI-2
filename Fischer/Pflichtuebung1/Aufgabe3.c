@@ -91,6 +91,8 @@ float* Audiofilter(float* sample,unsigned int size) {
                 //printf("%f\n",koef[(t%4)]);
 #else
 /* Implementierung, die auch mit MingGW Kompatibel sein soll*/
+
+                // Berechne hier die Summer auﬂerhalb der eigentlichen Formel.
                 float sum = 0;
                 for (int j = 0; j < 4; j++)
                 {
@@ -123,7 +125,7 @@ int main() {
     float* data = readDataChunk(&data_size);
 
     FILE *input;
-    input = fopen("test.wav", "rb");
+    input = fopen("testR.wav", "rb");
     if (input == NULL) {
         printf("Datei wurde nicht eingelesen\n");
         return -1;
