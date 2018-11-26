@@ -11,10 +11,11 @@
 #define M_PI 3.1415926535897
 #endif //M_PI
 
+#define __AUDIODATA__ "test.wav"
 
 float* readDataChunk(unsigned int* data_size) {
     FILE *input2;
-    input2 = fopen("test.wav", "rb");
+    input2 = fopen(__AUDIODATA__, "rb");
     struct CHUNKHEADER chunkhead;
     char findData[4];
     int position = 0;
@@ -101,7 +102,7 @@ int main() {
     FILE *input;
     float file_size = 0;
 
-    input = fopen("test.wav", "rb");
+    input = fopen(__AUDIODATA__, "rb");
     if (input == NULL) {
         printf("Datei wurde nicht eingelesen\n");
         return -1;
